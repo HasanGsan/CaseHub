@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CaseHub</string>
+    <string name="title_button_skip">Пропустить</string>
+    <string name="authorization_title_text">С возвращением!</string>
+    <string name="authorization_description_text">войдите, чтобы получить доступ к \nучётной записи</string>
+    <string name="hint_editText_email">Email</string>
+    <string name="hint_editText_password">Password</string>
+    <string name="forgot_password_text">Забыли пароль ?</string>
+    <string name="button_text_entry">Войти</string>
+    <string name="registration_link_text">Зарегестрируйтесь</string>
+    <string name="description_register_link">Нет аккаунта ?</string>
+</resources>
