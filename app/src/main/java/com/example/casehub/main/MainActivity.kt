@@ -18,30 +18,49 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.example.casehub.R
 import com.example.casehub.databinding.ActivityMainBinding
-import com.example.casehub.databinding.AuthorizationBinding
+import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var binding: ActivityMainBinding
-    private lateinit var binding: AuthorizationBinding
+    private lateinit var binding: ActivityMainBinding
+
+
+
 
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-        binding = AuthorizationBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
+        val bottomNavBar = binding.bottomNavigationMain
+        val navController = findNavController(R.id.navHostFragment)
+        bottomNavBar.setupWithNavController(navController)
 
+        val toolbar = binding.toolbarMain
+        setSupportActionBar(toolbar)
+
+        val appBarConfiguration = AppBarConfiguration (
+            setOf(R.id.mainFragment, R.id.workshopFragment, R.id.profileFragment)
+        )
+
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
 
         window.insetsController?.let {
             it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
             it.hide(WindowInsets.Type.systemBars())
         }
+
+
 
 //        binding.bottomNavigationBar.setOnApplyWindowInsetsListener(null)
 //        binding.bottomNavigationBar.setPadding(0,0,0,0)

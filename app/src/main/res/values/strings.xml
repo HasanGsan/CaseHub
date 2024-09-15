@@ -1,12 +1,29 @@
 <resources>
+
+
     <string name="app_name">CaseHub</string>
     <string name="title_button_skip">Пропустить</string>
     <string name="authorization_title_text">С возвращением!</string>
     <string name="authorization_description_text">войдите, чтобы получить доступ к \nучётной записи</string>
-    <string name="hint_editText_email">Email</string>
-    <string name="hint_editText_password">Password</string>
+    <string name="hint_editText_email">Введите почту</string>
+    <string name="hint_editText_password">Введите пароль</string>
+    <string name="hint_editText_password_again">Повторите пароль</string>
     <string name="forgot_password_text">Забыли пароль ?</string>
-    <string name="button_text_entry">Войти</string>
-    <string name="registration_link_text">Зарегестрируйтесь</string>
-    <string name="description_register_link">Нет аккаунта ?</string>
+    <string name="button_text_auth">Войти</string>
+    <string name="button_text_reg">Зарегистрироваться</string>
+    <string name="reg_link_text">Зарегестрируйтесь</string>
+    <string name="auth_link_text">Войти</string>
+    <string name="description_reg_link">Нет аккаунта ?</string>
+    <string name="description_auth_link">Уже есть аккаунт ?</string>
+    <string name="registration_title_text">Зарегистрируйтесь</string>
+    <string name="registration_description_text">и присоединитесь к сообществу CaseHub</string>
+    <string name="hint_editText_fio">Введите ФИО</string>
+
+
+    <!-- Навигация -->
+    <string name="main_title">Главная</string>
+    <string name="workshop_title">Мастерская</string>
+    <string name="profile_title">Профиль</string>
+
+
 </resources>

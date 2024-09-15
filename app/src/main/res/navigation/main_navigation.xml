@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <!--    Bottom bar navigation-->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.casehub.main_page.fragment.MainFragment"
+        android:label="@string/main_title"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_workshop"
+            app:destination="@id/workshopFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_fragment_main_to_fragment_profile"
+            app:destination="@id/profileFragment">
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workshopFragment"
+        android:name="com.example.casehub.workshop_page.fragment.WorkshopFragment"
+        android:label="@string/workshop_title"
+        tools:layout="@layout/fragment_workshop">
+
+        <action
+            android:id="@+id/action_fragment_workshop_to_fragment_main"
+            app:destination="@id/mainFragment">
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.casehub.profile_page.fragment.ProfileFragment"
+        android:label="@string/profile_title"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_fragment_profile_to_fragment_main"
+            app:destination="@id/mainFragment">
+        </action>
+
+    </fragment>
+    <!--    Bottom bar navigation-->
+
+
+
+
+
+</navigation>
+
