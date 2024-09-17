@@ -10,10 +10,11 @@
     <color name="dark_slate_gray">#49454F</color>
     <color name="blue">#6C63FF</color>
     <color name="button_color_blue">#6750A4</color>
+    <color name="ui_back_color">#faf0e6</color>
+    <color name="ui_toolbar_back">#F3EDF7</color>
 
-
-    <color name="selected_color">#6C63FF</color>
-    <color name="unselected_color">#49454F</color>
+    <color name="selected_color">@color/black</color>
+    <color name="unselected_color">@color/dark_slate_gray</color>
 
 </resources>
 

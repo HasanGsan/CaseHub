@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.CaseHub" parent="Theme.AppCompat.DayNight.NoActionBar"/>
+    <style name="Theme.CaseHub" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+
+<!--    Theme.AppCompat.DayNight.NoActionBar-->
 
 <!--    Кастомные стили для верстки-->
 
 <!-- Toolbar_title -->
     <style name="CustomToolbarTitleTextStyle">
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">35sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
