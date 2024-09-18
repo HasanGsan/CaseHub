@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main_page.tab_layout_adapter.tab_fragment.favorite_bar">
+    tools:context=".main_page.tab_main_adapter.tab_fragments.FavoriteBar">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

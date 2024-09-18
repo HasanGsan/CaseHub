@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.casehub.databinding.FragmentMainBinding
-import com.example.casehub.main_page.tab_layout_adapter.TabLayoutMainAdapter
+import com.example.casehub.main_page.tab_main_adapter.TabMainAdapter
 import com.google.android.material.tabs.TabLayout
 
 
@@ -18,7 +17,7 @@ class MainFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    private lateinit var adapter: TabLayoutMainAdapter
+    private lateinit var adapter: TabMainAdapter
 
 
 
@@ -37,7 +36,7 @@ class MainFragment : Fragment() {
         var tabLayout = binding.mainTabLayout
         var viewPager = binding.viewPagerMain
 
-        adapter = TabLayoutMainAdapter(childFragmentManager, lifecycle)
+        adapter = TabMainAdapter(childFragmentManager, lifecycle)
 
         tabLayout.addTab(tabLayout.newTab().setText("Все"))
         tabLayout.addTab(tabLayout.newTab().setText("Избранные"))

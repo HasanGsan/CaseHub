@@ -5,16 +5,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="МАСТЕРСКАЯ"
-        android:textSize="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/workshop_tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:tabMode="fixed"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="@color/button_color_blue"
+        app:tabIndicatorHeight="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager_workshop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/ui_back_color"
+        app:layout_constraintTop_toBottomOf="@id/workshop_tabLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-    </TextView>
+
+    </androidx.viewpager2.widget.ViewPager2>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
