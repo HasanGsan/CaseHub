@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_slate_gray">#49454F</color>
     <color name="blue">#6C63FF</color>
+    <color name="button_blue_system">#6750A4</color>
     <color name="button_color_blue">#6750A4</color>
     <color name="ui_back_color">#faf0e6</color>
     <color name="ui_toolbar_back">#F3EDF7</color>
