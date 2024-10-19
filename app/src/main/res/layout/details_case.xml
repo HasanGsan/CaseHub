@@ -1,6 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/ui_back_color">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="2/3"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@id/analytic_attach_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/analytic_attach_line"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/input_ui_case"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onAttachFileClick"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/item_analytic_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/attach_analytics_text"
+            android:textColor="@color/dark_slate_gray"
+            android:textSize="23sp"></TextView>
+
+        <ImageView
+            android:id="@+id/item_analytic_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/analytic_attach_icon"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/design_attach_line"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_ui_case"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onAttachFileClick"
+
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/analytic_attach_line">
+
+        <TextView
+            android:id="@+id/item_design_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/attach_analytics_text"
+            android:textColor="@color/dark_slate_gray"
+            android:textSize="23sp"></TextView>
+
+        <ImageView
+            android:id="@+id/item_design_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/design_attach_icon"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decision_attach_line"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_ui_case"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onAttachFileClick"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/design_attach_line">
+
+        <TextView
+            android:id="@+id/item_decision_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/attach_analytics_text"
+            android:textColor="@color/dark_slate_gray"
+            android:textSize="23sp"></TextView>
+
+        <ImageView
+            android:id="@+id/item_decision_icon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/programming_attach_icon"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hashTags"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/input_ui_case"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/design_attach_line">
+
+        <EditText
+            android:id="@+id/editTextHashtags"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/hash_tag_dop_text"
+            android:inputType="text"
+            android:textSize="23sp">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hashTagText_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="Например, капибара"
+        android:textColor="@color/dark_slate_gray"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@id/hashTags"
+        app:layout_constraintTop_toBottomOf="@id/hashTags"></TextView>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/hashTagsChipGroup"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_ui_case"
+        app:chipSpacing="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hashTagText_example"
+        app:singleLine="true">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:id="@+id/caseAuthor"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/input_ui_case"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hashTags">
+
+        <EditText
+            android:id="@+id/editTextCaseAuthor"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/text_case_author"
+            android:inputType="text"
+            android:orientation="vertical"
+            android:textSize="19.5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hashTagText_example">
+
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_icon_tipped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/text_logo_icon_tipped"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caseAuthor"></TextView>
+
+    <ImageButton
+        android:id="@+id/icon_export_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/export_to_project_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_icon_tipped"></ImageButton>
+
+    <LinearLayout
+        android:id="@+id/linkToCompany"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_ui_case"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/icon_export_logo">
+
+        <EditText
+            android:id="@+id/editTextLinkToCompany"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/text_link_to_company"
+            android:inputType="text"
+            android:orientation="vertical"
+            android:textSize="19.5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/create_case_button_fr2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_text_next"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
