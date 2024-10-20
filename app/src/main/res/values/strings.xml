@@ -50,6 +50,9 @@
     <string name="text_logo_icon_tipped">Загрузите логотип компании</string>
     <string name="text_case_author">Укажите компанию кейсо-держателя</string>
     <string name="text_link_to_company">Укажите ссылку на компанию</string>
+    <string name="text_case_res_link">Укажите ресурс, откуда взят кейс</string>
+    <string name="text_export_case">Загрузите кейс</string>
+    <string name="button_text_complete">Завершить</string>
 
 
 </resources>

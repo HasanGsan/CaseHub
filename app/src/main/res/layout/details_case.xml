@@ -7,11 +7,11 @@
     android:background="@color/ui_back_color">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewNumberPage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
-        android:text="2/3"
+        android:text="@string/number_quater_two"
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@id/analytic_attach_line"
@@ -199,7 +199,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/text_icon_tipped"
+        android:id="@+id/text_icon_tipped_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="20dp"
@@ -216,7 +216,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/export_to_project_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_icon_tipped"></ImageButton>
+        app:layout_constraintTop_toBottomOf="@id/text_icon_tipped_company"></ImageButton>
 
     <LinearLayout
         android:id="@+id/linkToCompany"
