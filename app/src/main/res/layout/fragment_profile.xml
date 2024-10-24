@@ -16,4 +16,25 @@
         app:layout_constraintBottom_toBottomOf="parent">
     </TextView>
 
+    <Button
+        android:id="@+id/create_case_button"
+        android:layout_width="56sp"
+        android:layout_height="66sp"
+        android:layout_marginEnd="10sp"
+        android:text="＋"
+        android:textSize="30sp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-thin"
+        android:textFontWeight="800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        android:gravity="center"
+        android:alpha="0.7"
+        android:elevation="12sp"
+        android:textColor="@color/text_create_button_color"
+        style="@style/button_customST_create_case">
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

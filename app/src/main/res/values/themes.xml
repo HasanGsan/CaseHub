@@ -23,15 +23,7 @@
         <item name="colorControlHighlight">@null</item>
     </style>
 
-<!--    Custom SearchView Design-->
-<!--    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">-->
-<!--        <item name="queryBackground">@color/ui_toolbar_back</item>-->
-<!--        <item name="android:textColor">@color/ui_text_color</item>-->
-<!--        <item name="android:textColorHint">@color/ui_text_color</item>-->
-<!--        <item name="android:textSize">15sp</item>-->
-<!--        <item name="android:iconifiedByDefault">false</item>-->
-<!--    </style>-->
-
+    <!-- Кастомный стиль для поисковика -->
     <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
         <item name="queryBackground">@color/ui_toolbar_back</item>
         <item name="android:textColor">@color/ui_text_color</item>
@@ -40,10 +32,16 @@
     </style>
 
 
+
+
+    <!-- Кастомный стиль для кнопки создания кейсов -->
+
+    <style name="button_customST_create_case" parent="ThemeOverlay.AppCompat">
+        <item name="backgroundTint">@color/create_button_color</item>
+        <item name="cornerRadius">14sp</item>
+    </style>
+
     <!--    Кастомные стили для верстки-->
-
-
-
 
 </resources>
 

@@ -15,6 +15,11 @@
     <color name="ui_toolbar_back">#F3EDF7</color>
     <color name="search_text_color">#74777F</color>
 
+
+    <color name="create_button_color">#EADDFF</color>
+    <color name="text_create_button_color">#21005D</color>
+
+
     <color name="selected_color">@color/black</color>
     <color name="unselected_color">@color/dark_slate_gray</color>
 
