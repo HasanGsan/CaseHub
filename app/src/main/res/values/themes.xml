@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <color name="ui_text_color">#74777F</color>
+
     <style name="Theme.CaseHub" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
 
 <!--    Theme.AppCompat.DayNight.NoActionBar-->
@@ -20,7 +23,25 @@
         <item name="colorControlHighlight">@null</item>
     </style>
 
-<!--    Кастомные стили для верстки-->
+<!--    Custom SearchView Design-->
+<!--    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">-->
+<!--        <item name="queryBackground">@color/ui_toolbar_back</item>-->
+<!--        <item name="android:textColor">@color/ui_text_color</item>-->
+<!--        <item name="android:textColorHint">@color/ui_text_color</item>-->
+<!--        <item name="android:textSize">15sp</item>-->
+<!--        <item name="android:iconifiedByDefault">false</item>-->
+<!--    </style>-->
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@color/ui_toolbar_back</item>
+        <item name="android:textColor">@color/ui_text_color</item>
+        <item name="android:textColorHint">@color/ui_text_color</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <!--    Кастомные стили для верстки-->
+
 
 
 

@@ -53,6 +53,9 @@
     <string name="text_case_res_link">Укажите ресурс, откуда взят кейс</string>
     <string name="text_export_case">Загрузите кейс</string>
     <string name="button_text_complete">Завершить</string>
+    <string name="searchbar_hint">Поиск по кейсам...\n</string>
+    <string name="text_case_empty">Список кейсов пуст</string>
+    <string name="text_case_empty_caveat">Похоже вы еще не создали ни одного\n \tкейса. Самое время это исправить!</string>
 
 
 </resources>

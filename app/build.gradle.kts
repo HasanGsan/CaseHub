@@ -60,7 +60,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     //Навигация
 
-
+    implementation("com.google.android.material:material:1.10.0")
     implementation (libs.androidx.viewpager2)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -72,7 +72,6 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.material)
     implementation(libs.androidx.junit.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

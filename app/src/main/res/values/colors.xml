@@ -13,6 +13,7 @@
     <color name="button_color_blue">#6750A4</color>
     <color name="ui_back_color">#d6d7d7</color>
     <color name="ui_toolbar_back">#F3EDF7</color>
+    <color name="search_text_color">#74777F</color>
 
     <color name="selected_color">@color/black</color>
     <color name="unselected_color">@color/dark_slate_gray</color>
