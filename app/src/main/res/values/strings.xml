@@ -80,7 +80,8 @@
     <string name="text_insane_expla">Эмодзи безумный</string>
     <string name="text_normal_expla">Удовлетворенный эмодзи</string>
     <string name="text_easy_expla">Бутылочка картинка</string>
-
+    <string name="network_error_title_text">Скоро вернёмся в мир кейсов!</string>
+    <string name="network_error_description_text">Упс, Соединение потеряно.</string>
 
 
 </resources>

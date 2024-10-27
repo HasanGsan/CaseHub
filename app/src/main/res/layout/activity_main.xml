@@ -61,4 +61,19 @@
             app:itemTextColor="@color/nav_item_color"
             app:menu="@menu/bottom_nav_menu"/>
 
+
+        <include
+            android:id="@+id/network_include"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            layout="@layout/network_error_blank"
+            android:visibility="gone">
+        </include>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
