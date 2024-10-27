@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -8,8 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ПРОФИЛЬ"
-        android:textSize="50dp"
+        android:text="@string/test_text_to_profile_layout"
+        android:textSize="50sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +22,7 @@
         android:layout_width="56sp"
         android:layout_height="66sp"
         android:layout_marginEnd="10sp"
-        android:text="＋"
+        android:text="@string/text_content_plus"
         android:textSize="30sp"
         android:textStyle="normal"
         android:fontFamily="sans-serif-thin"
@@ -34,7 +35,8 @@
         android:alpha="0.7"
         android:elevation="12sp"
         android:textColor="@color/text_create_button_color"
-        style="@style/button_customST_create_case">
+        style="@style/button_customST_create_case"
+        tools:targetApi="p">
     </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

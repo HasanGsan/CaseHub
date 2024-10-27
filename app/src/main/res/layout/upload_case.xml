@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,10 +10,10 @@
         android:id="@+id/textViewNumberPage3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="@dimen/layout_margin_small_16dp"
         android:text="@string/number_quater_three"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="@dimen/text_size_medium_18sp"
         app:layout_constraintBottom_toTopOf="@id/ResLink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,6 +26,7 @@
         android:layout_marginTop="65dp"
         android:background="@drawable/input_ui_case"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:onClick="onAttachFileClick"
         android:orientation="horizontal"
@@ -33,11 +34,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <EditText
             android:id="@+id/EditCaseResLink"
-            android:layout_width="380sp"
+            android:layout_width="@dimen/none_dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:autofillHints=""
             android:background="@null"
             android:hint="@string/text_case_res_link"
             android:inputType="text"
@@ -45,31 +48,47 @@
             android:textSize="19.5sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hashTagText_example">
+            app:layout_constraintTop_toBottomOf="@id/hashTagText_example"
+            tools:ignore="InefficientWeight,TouchTargetSizeCheck">
         </EditText>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_icon_tipped_case"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/case_export_case"
+        android:layout_width="@dimen/medium_width_380dp"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="10dp"
-        android:text="@string/text_export_case"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ResLink"></TextView>
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ResLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/icon_export_case"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/export_to_project_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_icon_tipped_case"></ImageButton>
+        <TextView
+            android:id="@+id/text_icon_tipped_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:text="@string/text_export_case"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ResLink"
+            tools:ignore="RtlSymmetry">
+        </TextView>
 
+        <ImageButton
+            android:id="@+id/export_case_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/text_content_description_logo_two"
+            android:src="@drawable/export_to_project_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_icon_tipped_case">
+        </ImageButton>
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/create_case_button_fr3"
@@ -80,10 +99,10 @@
         android:background="@drawable/rounded_button"
         android:text="@string/button_text_complete"
         android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/case_export_case"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.8"></Button>
+        app:layout_constraintVertical_bias="0.8">
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

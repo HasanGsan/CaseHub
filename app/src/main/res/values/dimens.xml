@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ALL -->
+    <dimen name="none_dp">0dp</dimen>
+    <dimen name="indicator_height_4dp">4dp</dimen>
+    <dimen name="elevation_12dp">12dp</dimen>
+
+    <!-- Icons -->
+    <dimen name="item_icon_size_32dp">32dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_large_160dp">160dp</dimen>
+    <dimen name="padding_medium_38dp">38dp</dimen>
+    <dimen name="padding_medium_28dp">28dp</dimen>
+    <dimen name="padding_medium_20dp">20dp</dimen>
+    <dimen name="padding_medium_16dp">16dp</dimen>
+    <dimen name="padding_small_12dp">12dp</dimen>
+    <dimen name="padding_small_8dp">8dp</dimen>
+    <dimen name="padding_small_4dp">4dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="layout_large_margin_80dp">80dp</dimen>
+    <dimen name="layout_large_margin_64dp">64dp</dimen>
+    <dimen name="layout_medium_margin_40dp">40dp</dimen>
+    <dimen name="layout_margin_medium_20dp">20dp</dimen>
+    <dimen name="layout_margin_small_16dp">16dp</dimen>
+    <dimen name="layout_margin_small_12dp">12dp</dimen>
+    <dimen name="layout_margin_small_8dp">8dp</dimen>
+    <dimen name="layout_margin_small_4dp">4dp</dimen>
+
+
+    <!-- Button -->
+    <dimen name="button_large_width_150dp">150dp</dimen>
+    <dimen name="button_medium_width_120dp">120dp</dimen>
+    <dimen name="button_medium_height_48dp">48dp</dimen>
+
+    <!-- WH CASE-->
+    <dimen name="medium_width_481dp">481dp</dimen>
+    <dimen name="medium_height_481dp">481dp</dimen>
+    <dimen name="medium_width_460dp">460dp</dimen>
+    <dimen name="medium_height_460dp">460dp</dimen>
+    <dimen name="medium_width_442dp">442dp</dimen>
+    <dimen name="medium_height_442dp">442dp</dimen>
+    <dimen name="medium_width_380dp">380dp</dimen>
+    <dimen name="medium_width_360dp">360dp</dimen>
+    <dimen name="medium_height_214dp">214dp</dimen>
+    <dimen name="medium_width_214dp">214dp</dimen>
+    <dimen name="medium_height_152dp">152dp</dimen>
+    <dimen name="medium_width_152dp">152dp</dimen>
+    <dimen name="medium_height_120dp">120dp</dimen>
+    <dimen name="medium_width_120dp">120dp</dimen>
+    <dimen name="medium_height_72dp">72dp</dimen>
+    <dimen name="medium_width_72dp">72dp</dimen>
+    <dimen name="medium_width_64dp">64dp</dimen>
+    <dimen name="medium_width_56dp">56dp</dimen>
+    <dimen name="medium_height_56dp">56dp</dimen>
+    <dimen name="medium_width_52dp">52dp</dimen>
+    <dimen name="medium_height_52dp">52dp</dimen>
+    <dimen name="medium_width_24dp">24dp</dimen>
+    <dimen name="medium_height_24dp">24dp</dimen>
+
+
+    <!-- TextSize  -->
+    <dimen name="text_size_large_32sp">32sp</dimen>
+    <dimen name="text_size_medium_24sp">24sp</dimen>
+    <dimen name="text_size_medium_20sp">20sp</dimen>
+    <dimen name="text_size_medium_18sp">18sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+
+
+    <!-- Min Max Height Width -->
+    <dimen name="min_height_48dp">48dp</dimen>
+
+
+
+</resources>

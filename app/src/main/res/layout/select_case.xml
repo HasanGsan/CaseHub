@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_back_color">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ui_back_color">
@@ -9,11 +17,10 @@
         android:id="@+id/textViewNumberPage1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-
+        android:layout_marginEnd="@dimen/layout_margin_small_16dp"
         android:text="@string/number_quater_one"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="@dimen/text_size_medium_18sp"
         app:layout_constraintBottom_toTopOf="@id/title_input_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,390 +30,477 @@
     <EditText
         android:id="@+id/title_input_line"
         style="@style/CustomEditText"
-        android:layout_width="380dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="@dimen/medium_width_380dp"
+        android:layout_height="@dimen/medium_height_56dp"
+        android:layout_marginTop="@dimen/layout_medium_margin_40dp"
+        android:autofillHints="Название"
         android:background="@drawable/input_ui_case"
         android:ellipsize="end"
         android:hint="@string/title_input_line_text"
         android:inputType="textEmailAddress"
-        android:maxLength="129"
-        android:padding="15dp"
+        android:maxLength="128"
+        android:padding="@dimen/padding_medium_16dp"
         android:scrollHorizontally="true"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></EditText>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck">
+
+    </EditText>
 
     <EditText
         android:id="@+id/description_input_line"
         style="@style/CustomEditText"
-        android:layout_width="380dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="65dp"
+        android:layout_width="@dimen/medium_width_380dp"
+        android:layout_height="@dimen/medium_height_120dp"
+        android:layout_marginTop="@dimen/layout_large_margin_64dp"
+        android:autofillHints="Бла-бла-бла"
         android:background="@drawable/input_ui_case"
         android:ellipsize="end"
         android:gravity="top"
         android:hint="@string/description_input_line_text"
         android:inputType="textEmailAddress"
         android:maxLength="129"
-        android:padding="15dp"
+        android:padding="@dimen/padding_medium_16dp"
         android:scrollHorizontally="true"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/title_input_line"></EditText>
+        app:layout_constraintTop_toTopOf="@id/title_input_line"
+        tools:ignore="TextContrastCheck">
 
-    <TextView
-        android:id="@+id/complexity_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="monospace"
-        android:text="@string/select_case_complexity_text"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description_input_line"></TextView>
+    </EditText>
 
-    <RadioGroup
-        android:id="@+id/radio_case_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+
+    <LinearLayout
+        android:id="@+id/case_radio_complexity"
+        android:layout_width="@dimen/medium_height_442dp"
+        android:layout_height="@dimen/medium_height_214dp"
         android:orientation="vertical"
+        android:padding="@dimen/padding_medium_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/complexity_text">
+        app:layout_constraintTop_toBottomOf="@id/description_input_line">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/complexity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:fontFamily="monospace"
+            android:text="@string/select_case_complexity_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium_20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description_input_line">
+
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/radio_case_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginTop="@dimen/layout_margin_small_12dp"
+            android:layout_marginEnd="@dimen/layout_margin_small_12dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/complexity_text"
+            tools:ignore="UselessParent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/medium_width_24dp"
+                    android:layout_height="@dimen/medium_height_24dp"
+                    android:layout_marginEnd="@dimen/layout_margin_small_16dp"
+                    android:contentDescription="@string/text_insane_expla"
+                    android:src="@drawable/hard_level_icon"
+                    tools:ignore="ImageContrastCheck">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="@dimen/none_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/complexity_text_level_hard"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium_20sp"
+                    tools:ignore="InefficientWeight">
+
+                </TextView>
+
+                <RadioButton
+                    android:id="@+id/radio_hard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                </RadioButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/medium_width_24dp"
+                    android:layout_height="@dimen/medium_height_24dp"
+                    android:layout_marginEnd="@dimen/layout_margin_small_16dp"
+                    android:contentDescription="@string/text_normal_expla"
+                    android:src="@drawable/medium_level_icon"
+                    tools:ignore="ImageContrastCheck">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="@dimen/none_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/complexity_text_level_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium_20sp"
+                    tools:ignore="InefficientWeight">
+
+                </TextView>
+
+                <RadioButton
+                    android:id="@+id/radio_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/medium_width_24dp"
+                    android:layout_height="@dimen/medium_height_24dp"
+                    android:layout_marginEnd="@dimen/layout_margin_small_16dp"
+                    android:contentDescription="@string/text_easy_expla"
+                    android:src="@drawable/easy_level_icon">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="@dimen/none_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/complexity_text_level_easy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium_20sp"
+                    tools:ignore="InefficientWeight">
+
+                </TextView>
+
+                <RadioButton
+                    android:id="@+id/radio_easy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/case_checkbox_complexity"
+        android:layout_width="@dimen/medium_width_442dp"
+        android:layout_height="@dimen/medium_width_481dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/case_radio_complexity"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/platform_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginBottom="@dimen/layout_margin_small_16dp"
+            android:fontFamily="monospace"
+            android:text="@string/select_case_platform_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium_20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/case_radio_complexity">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/LinearCheckBox_desktop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/platform_text">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/hard_level_icon"></ImageView>
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_notepad_expla"
+                android:src="@drawable/desktop_title_icon">
+            </ImageView>
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/none_dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/complexity_text_level_hard"
+                android:paddingStart="@dimen/padding_small_12dp"
+                android:text="@string/desktop_platform_title"
                 android:textColor="@color/black"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry">
 
-            <RadioButton
-                android:id="@+id/radio_hard"
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/desktop_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck">
+
+            </CheckBox>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearCheckBox_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginTop="@dimen/layout_margin_small_8dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_desktop">
+
+            <ImageView
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_internet_expla"
+                android:src="@drawable/web_platform_icon"
+                tools:ignore="ImageContrastCheck">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="@dimen/none_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/padding_small_12dp"
+                android:text="@string/web_platform_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/web_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/LinearCheckBox_ai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_12dp"
+            android:layout_marginTop="@dimen/layout_margin_small_8dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_web">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/medium_level_icon"></ImageView>
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_ai_expla"
+                android:src="@drawable/platform_ai_icon" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/none_dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/complexity_text_level_medium"
+                android:paddingStart="@dimen/padding_small_12dp"
+                android:text="@string/ai_platform_text"
                 android:textColor="@color/black"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry" />
 
-            <RadioButton
-                android:id="@+id/radio_medium"
+            <CheckBox
+                android:id="@+id/ai_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/LinearCheckBox_mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginTop="@dimen/layout_margin_small_8dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_ai">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/easy_level_icon"></ImageView>
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_telephone_expla"
+                android:src="@drawable/mobile_platform_icon" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/none_dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/complexity_text_level_easy"
+                android:paddingStart="@dimen/layout_margin_small_12dp"
+                android:text="@string/mobile_platform_text"
                 android:textColor="@color/black"
-                android:textSize="20dp"></TextView>
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry" />
 
-            <RadioButton
-                android:id="@+id/radio_easy"
+            <CheckBox
+                android:id="@+id/mobile_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+
         </LinearLayout>
 
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/platform_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="monospace"
-        android:text="@string/select_case_platform_text"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio_case_group"></TextView>
-
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_desktop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/platform_text">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/desktop_title_icon" />
-
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/LinearCheckBox_chatbot"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/desktop_platform_title"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginTop="@dimen/layout_margin_small_8dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_mobile">
 
-        <CheckBox
-            android:id="@+id/desktop_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_robot_expla"
+                android:src="@drawable/chatbot_platform_icon" />
 
+            <TextView
+                android:layout_width="@dimen/none_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/padding_small_12dp"
+                android:text="@string/chatbot_platform_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/chatbot_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearCheckBox_gameDev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin_small_16dp"
+            android:layout_marginTop="@dimen/layout_margin_small_8dp"
+            android:layout_marginEnd="@dimen/layout_margin_medium_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_chatbot">
+
+            <ImageView
+                android:layout_width="@dimen/medium_width_24dp"
+                android:layout_height="@dimen/medium_height_24dp"
+                android:layout_marginEnd="@dimen/layout_margin_small_4dp"
+                android:contentDescription="@string/text_gameDex_expla"
+                android:src="@drawable/game_dev_platform_icon"
+                tools:ignore="ImageContrastCheck">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="@dimen/none_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/layout_margin_small_12dp"
+                android:text="@string/gameDev_platform_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium_20sp"
+                tools:ignore="InefficientWeight,RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/gameDev_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/create_case_button_fr1"
+            android:layout_width="@dimen/button_large_width_150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/layout_margin_small_16dp"
+            android:layout_marginBottom="@dimen/layout_margin_small_12dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/button_text_next"
+            android:textColor="@color/white">
+        </Button>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_desktop">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/web_platform_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/web_platform_title"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/web_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_ai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_web">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/platform_ai_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/ai_platform_text"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/ai_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_mobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_ai">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/mobile_platform_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/mobile_platform_text"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/mobile_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_chatbot"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_mobile">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/chatbot_platform_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/chatbot_platform_text"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/chatbot_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearCheckBox_gameDev"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="18dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LinearCheckBox_chatbot">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/game_dev_platform_icon" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:text="@string/gameDev_platform_text"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/gameDev_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/create_case_button_fr1"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/rounded_button"
-        android:text="@string/button_text_next"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-       ></Button>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

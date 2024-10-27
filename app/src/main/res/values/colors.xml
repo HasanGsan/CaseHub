@@ -15,6 +15,8 @@
     <color name="ui_toolbar_back">#F3EDF7</color>
     <color name="search_text_color">#74777F</color>
 
+    <color name="link_special_text">#2962FF</color>
+    <color name="special_hint_color">#00838F</color>
 
     <color name="create_button_color">#EADDFF</color>
     <color name="text_create_button_color">#21005D</color>

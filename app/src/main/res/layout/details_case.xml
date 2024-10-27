@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/ui_back_color">
 
     <TextView
         android:id="@+id/textViewNumberPage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="15sp"
         android:text="@string/number_quater_two"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/analytic_attach_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,109 +23,122 @@
 
     <LinearLayout
         android:id="@+id/analytic_attach_line"
-        android:layout_width="380dp"
+        android:layout_width="380sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="65sp"
         android:background="@drawable/input_ui_case"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:onClick="onAttachFileClick"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/item_analytic_text"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/attach_analytics_text"
             android:textColor="@color/dark_slate_gray"
-            android:textSize="23sp"></TextView>
+            android:textSize="23sp">
+        </TextView>
 
         <ImageView
             android:id="@+id/item_analytic_icon"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/analytic_attach_icon"></ImageView>
+            android:layout_width="34sp"
+            android:layout_height="34sp"
+            android:layout_marginStart="8sp"
+            android:contentDescription="@string/content_description_icon_analytic"
+            android:src="@drawable/analytic_attach_icon">
+        </ImageView>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/design_attach_line"
-        android:layout_width="380dp"
+        android:layout_width="380sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10sp"
         android:background="@drawable/input_ui_case"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:onClick="onAttachFileClick"
 
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/analytic_attach_line">
 
         <TextView
             android:id="@+id/item_design_text"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/attach_analytics_text"
+            android:text="@string/attach_design_text"
             android:textColor="@color/dark_slate_gray"
-            android:textSize="23sp"></TextView>
+            android:textSize="23sp"
+            tools:onClick="onAttachFileClick">
+        </TextView>
 
         <ImageView
             android:id="@+id/item_design_icon"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/design_attach_icon"></ImageView>
+            android:layout_width="34sp"
+            android:layout_height="34sp"
+            android:layout_marginStart="8sp"
+            android:contentDescription="@string/content_description_icon_design"
+            android:src="@drawable/design_attach_icon">
+        </ImageView>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/decision_attach_line"
-        android:layout_width="380dp"
+        android:layout_width="380sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10sp"
         android:background="@drawable/input_ui_case"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:onClick="onAttachFileClick"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/design_attach_line">
 
         <TextView
             android:id="@+id/item_decision_text"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/attach_analytics_text"
+            android:text="@string/attach_decision_text"
             android:textColor="@color/dark_slate_gray"
-            android:textSize="23sp"></TextView>
+            android:textSize="23sp">
+        </TextView>
 
         <ImageView
             android:id="@+id/item_decision_icon"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/programming_attach_icon"></ImageView>
+            android:layout_width="34sp"
+            android:layout_height="34sp"
+            android:layout_marginStart="8sp"
+            android:contentDescription="@string/content_description_icon_programming"
+            android:src="@drawable/programming_attach_icon">
+        </ImageView>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/hashTags"
-        android:layout_width="380dp"
+        android:layout_width="380sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="85sp"
         android:background="@drawable/input_ui_case"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/design_attach_line">
@@ -132,13 +146,15 @@
         <EditText
             android:id="@+id/editTextHashtags"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/none_dp"
             android:layout_weight="1"
+            android:autofillHints="hash_tags"
             android:background="@null"
             android:hint="@string/hash_tag_dop_text"
             android:inputType="text"
-            android:textSize="23sp">
-
+            android:minHeight="@dimen/min_height_48dp"
+            android:textSize="@dimen/text_size_medium_24sp"
+            tools:ignore="InefficientWeight">
         </EditText>
 
     </LinearLayout>
@@ -147,19 +163,20 @@
         android:id="@+id/hashTagText_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="8dp"
-        android:text="Например, капибара"
+        android:layout_marginStart="@dimen/layout_margin_medium_20dp"
+        android:layout_marginBottom="@dimen/layout_margin_small_8dp"
+        android:text="@string/test_tag_description"
         android:textColor="@color/dark_slate_gray"
-        android:textSize="17dp"
+        android:textSize="@dimen/text_size_16sp"
         app:layout_constraintStart_toStartOf="@id/hashTags"
-        app:layout_constraintTop_toBottomOf="@id/hashTags"></TextView>
+        app:layout_constraintTop_toBottomOf="@id/hashTags">
+    </TextView>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/hashTagsChipGroup"
-        android:layout_width="380dp"
+        android:layout_width="@dimen/medium_width_380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/layout_margin_small_12dp"
         android:background="@drawable/input_ui_case"
         app:chipSpacing="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,91 +188,106 @@
 
     <LinearLayout
         android:id="@+id/caseAuthor"
-        android:layout_width="380dp"
+        android:layout_width="@dimen/medium_width_380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="@dimen/layout_medium_margin_40dp"
         android:background="@drawable/input_ui_case"
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="@dimen/padding_medium_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hashTags">
 
         <EditText
             android:id="@+id/editTextCaseAuthor"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/medium_width_380dp"
+            android:layout_height="@dimen/none_dp"
             android:layout_weight="1"
+            android:autofillHints="organizationName"
             android:background="@null"
             android:hint="@string/text_case_author"
             android:inputType="text"
+            android:minHeight="@dimen/min_height_48dp"
             android:orientation="vertical"
             android:textSize="19.5sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hashTagText_example">
-
+            app:layout_constraintTop_toBottomOf="@id/hashTagText_example"
+            tools:ignore="InefficientWeight">
         </EditText>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_icon_tipped_company"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/container_text_to_logo_export"
+        android:layout_width="@dimen/medium_width_380dp"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingTop="20dp"
-        android:text="@string/text_logo_icon_tipped"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/caseAuthor"></TextView>
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/caseAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/icon_export_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/export_to_project_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_icon_tipped_company"></ImageButton>
+        <TextView
+            android:id="@+id/text_icon_tipped_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_medium_20dp"
+            android:paddingTop="@dimen/padding_medium_20dp"
+            android:text="@string/text_logo_icon_tipped"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium_18sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/icon_export_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/export_to_project_icon"
+            android:contentDescription="@string/text_content_description_logo">
+        </ImageButton>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linkToCompany"
-        android:layout_width="380dp"
+        android:layout_width="@dimen/medium_width_380dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_ui_case"
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="@dimen/padding_medium_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/icon_export_logo">
+        app:layout_constraintTop_toBottomOf="@id/container_text_to_logo_export">
 
         <EditText
             android:id="@+id/editTextLinkToCompany"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/medium_width_380dp"
+            android:layout_height="@dimen/none_dp"
             android:layout_weight="1"
+            android:autofillHints="companyLink"
             android:background="@null"
             android:hint="@string/text_link_to_company"
             android:inputType="text"
+            android:minHeight="@dimen/min_height_48dp"
             android:orientation="vertical"
             android:textSize="19.5sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="InefficientWeight">
         </EditText>
     </LinearLayout>
 
     <Button
         android:id="@+id/create_case_button_fr2"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/button_large_width_150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="@dimen/layout_margin_small_16dp"
+        android:layout_marginEnd="@dimen/layout_margin_small_16dp"
         android:background="@drawable/rounded_button"
         android:text="@string/button_text_next"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"></Button>
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

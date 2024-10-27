@@ -13,10 +13,10 @@
         style="@style/CustomSearchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/layout_margin_small_16dp"
         android:background="@drawable/rounded_search_background"
         android:iconifiedByDefault="true"
-        android:queryHint="Поиск..."
+        android:queryHint="@string/searcher_case_hub"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,10 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="@dimen/layout_margin_medium_20dp"
             android:text="@string/text_case_empty"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_medium_20sp"
             android:textStyle="bold">
         </TextView>
 
@@ -48,28 +48,28 @@
             android:layout_gravity="center"
             android:text="@string/text_case_empty_caveat"
             android:textColor="@color/ui_text_color"
-            android:textSize="20sp">
+            android:textSize="@dimen/text_size_medium_20sp">
         </TextView>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/create_case_button"
-        android:layout_width="56sp"
-        android:layout_height="66sp"
-        android:layout_marginEnd="10sp"
-        android:text="＋"
-        android:textSize="30sp"
+        android:layout_width="@dimen/medium_width_64dp"
+        android:layout_height="@dimen/medium_height_72dp"
+        android:layout_marginEnd="@dimen/layout_margin_small_8dp"
+        android:text="@string/text_content_plus"
+        android:textSize="@dimen/text_size_large_32sp"
         android:textStyle="normal"
         android:fontFamily="sans-serif-thin"
-        android:textFontWeight="800"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
         android:gravity="center"
         android:alpha="0.7"
-        android:elevation="12sp"
+        android:elevation="@dimen/elevation_12dp"
         android:textColor="@color/text_create_button_color"
         style="@style/button_customST_create_case">
     </Button>

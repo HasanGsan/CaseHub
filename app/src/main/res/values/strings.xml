@@ -56,6 +56,31 @@
     <string name="searchbar_hint">Поиск по кейсам...\n</string>
     <string name="text_case_empty">Список кейсов пуст</string>
     <string name="text_case_empty_caveat">Похоже вы еще не создали ни одного\n \tкейса. Самое время это исправить!</string>
+    <string name="searcher_case_hub">Поиск по кейсам…</string>
+    <string name="text_content_plus">＋</string>
+
+
+
+
+
+                <!-- Временные тексты -->
+    <string name="test_text_to_profile_layout">ПРОФИЛЬ</string>
+    <string name="text_content_description_logo">Нажмите чтобы загрузить логотип компании</string>
+    <string name="text_content_description_logo_two">Нажмите чтобы загрузить кейс компании</string>
+    <string name="test_tag_description">Например, капибара</string>
+    <string name="content_description_icon_analytic">Картинка аналитика</string>
+    <string name="content_description_icon_design">Картинка дизайна</string>
+    <string name="content_description_icon_programming">Картинка программирование</string>
+    <string name="text_notepad_expla">Картинка Ноутбук</string>
+    <string name="text_internet_expla">Сетевая паутина</string>
+    <string name="text_ai_expla">ИИ картинка</string>
+    <string name="text_telephone_expla">Телефон картинка</string>
+    <string name="text_robot_expla">Робот картинка</string>
+    <string name="text_gameDex_expla">Гейм дев картинка</string>
+    <string name="text_insane_expla">Эмодзи безумный</string>
+    <string name="text_normal_expla">Удовлетворенный эмодзи</string>
+    <string name="text_easy_expla">Бутылочка картинка</string>
+
 
 
 </resources>
