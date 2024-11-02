@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.casehub"
+    namespace = "com.hasyanapp.casehub"
     compileSdk = 34
 
     viewBinding{
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.casehub"
+        applicationId = "com.hasyanapp.casehub"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

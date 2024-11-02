@@ -1,11 +1,11 @@
-package com.example.casehub.main_page.tab_main_adapter.tab_fragments
+package com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.casehub.R
+import com.hasyanapp.casehub.R
 
 
 class FavoriteBar : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.casehub.testing_app
+package com.hasyanapp.casehub.testing_app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

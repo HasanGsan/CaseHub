@@ -9,7 +9,7 @@
     <!--    Bottom bar navigation-->
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.casehub.main_page.fragment.MainFragment"
+        android:name="com.hasyanapp.casehub.main_page.fragment.MainFragment"
         android:label="@string/main_title"
         tools:layout="@layout/fragment_main">
 
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/workshopFragment"
-        android:name="com.example.casehub.workshop_page.fragment.WorkshopFragment"
+        android:name="com.hasyanapp.casehub.workshop_page.fragment.WorkshopFragment"
         android:label="@string/workshop_title"
         tools:layout="@layout/fragment_workshop">
 
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.casehub.profile_page.fragment.ProfileFragment"
+        android:name="com.hasyanapp.casehub.profile_page.fragment.ProfileFragment"
         android:label="@string/profile_title"
         tools:layout="@layout/fragment_profile">
 

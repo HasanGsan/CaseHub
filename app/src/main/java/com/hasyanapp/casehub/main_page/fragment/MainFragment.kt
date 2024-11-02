@@ -1,4 +1,4 @@
-package com.example.casehub.main_page.fragment
+package com.hasyanapp.casehub.main_page.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.casehub.databinding.FragmentMainBinding
-import com.example.casehub.main_page.tab_main_adapter.TabMainAdapter
+import com.hasyanapp.casehub.databinding.FragmentMainBinding
+import com.hasyanapp.casehub.main_page.tab_main_adapter.TabMainAdapter
 import com.google.android.material.tabs.TabLayout
 
 

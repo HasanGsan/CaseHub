@@ -58,6 +58,8 @@
     <string name="text_case_empty_caveat">Похоже вы еще не создали ни одного\n \tкейса. Самое время это исправить!</string>
     <string name="searcher_case_hub">Поиск по кейсам…</string>
     <string name="text_content_plus">＋</string>
+    <string name="text_favorite_case_empty_caveat">Похоже вы еще не добавили ни одного\n \tкейса. Самое время это исправить!</string>
+    <string name="text_favorite_case_empty">Избранное пусто</string>
 
 
 
@@ -82,6 +84,7 @@
     <string name="text_easy_expla">Бутылочка картинка</string>
     <string name="network_error_title_text">Скоро вернёмся в мир кейсов!</string>
     <string name="network_error_description_text">Упс, Соединение потеряно.</string>
+
 
 
 </resources>

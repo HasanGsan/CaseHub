@@ -1,11 +1,11 @@
-package com.example.casehub.main_page.tab_main_adapter
+package com.hasyanapp.casehub.main_page.tab_main_adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.casehub.main_page.tab_main_adapter.tab_fragments.AllBar
-import com.example.casehub.main_page.tab_main_adapter.tab_fragments.FavoriteBar
+import com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments.AllBar
+import com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments.FavoriteBar
 
 class TabMainAdapter (
     fragmentManager: FragmentManager,

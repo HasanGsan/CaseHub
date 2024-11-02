@@ -1,13 +1,13 @@
-package com.example.casehub.workshop_page.tab_workshop_adapter.tab_fragments
+package com.hasyanapp.casehub.workshop_page.tab_workshop_adapter.tab_fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.casehub.R
+import com.hasyanapp.casehub.R
 
-class PublishedBar : Fragment() {
+class DraftsBar : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +15,7 @@ class PublishedBar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_published_bar, container, false)
+        return inflater.inflate(R.layout.fragment_drafts_bar, container, false)
     }
 
 

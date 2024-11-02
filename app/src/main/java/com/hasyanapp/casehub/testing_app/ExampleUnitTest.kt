@@ -1,4 +1,4 @@
-package com.example.casehub.testing_app
+package com.hasyanapp.casehub.testing_app
 
 import org.junit.Test
 

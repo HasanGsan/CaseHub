@@ -1,4 +1,4 @@
-package com.example.casehub.main
+package com.hasyanapp.casehub.main
 
 import android.os.Build
 import android.os.Bundle
@@ -24,11 +24,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.example.casehub.R
-import com.example.casehub.databinding.ActivityMainBinding
-import com.example.network.ConnectivityObserver
-import com.example.network.NetworkConnectivityObserver
+
 import com.google.android.material.appbar.MaterialToolbar
+import com.hasyanapp.casehub.R
+import com.hasyanapp.casehub.databinding.ActivityMainBinding
+import com.hasyanapp.network.ConnectivityObserver
+import com.hasyanapp.network.NetworkConnectivityObserver
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -49,8 +50,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-           networkBlank = findViewById(R.id.network_include)
-                connectivityObserver = NetworkConnectivityObserver(applicationContext)
+        networkBlank = findViewById(R.id.network_include)
+        connectivityObserver = NetworkConnectivityObserver(applicationContext)
         val bottomNavBar = binding.bottomNavigationMain
         val navController = findNavController(R.id.navHostFragment)
         bottomNavBar.setupWithNavController(navController)
@@ -93,7 +94,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        TODO("Пофикси возможность свапа темы и взаимодействие с поисковиком в случае потери интернета.");
 
 
 //        binding.bottomNavigationBar.setOnApplyWindowInsetsListener(null)
@@ -101,5 +101,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-
-

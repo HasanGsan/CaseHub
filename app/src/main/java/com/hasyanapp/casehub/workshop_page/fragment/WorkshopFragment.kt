@@ -1,4 +1,4 @@
-package com.example.casehub.workshop_page.fragment
+package com.hasyanapp.casehub.workshop_page.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.casehub.databinding.FragmentWorkshopBinding
-import com.example.casehub.main_page.tab_main_adapter.TabMainAdapter
-import com.example.casehub.workshop_page.tab_workshop_adapter.TabWorkshopAdapter
+import com.hasyanapp.casehub.workshop_page.tab_workshop_adapter.TabWorkshopAdapter
 import com.google.android.material.tabs.TabLayout
+import com.hasyanapp.casehub.databinding.FragmentWorkshopBinding
 
 
 class WorkshopFragment : Fragment() {
