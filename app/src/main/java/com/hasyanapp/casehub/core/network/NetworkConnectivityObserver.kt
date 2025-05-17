@@ -1,4 +1,4 @@
-package com.hasyanapp.network
+package com.hasyanapp.casehub.core.network
 
 import android.content.Context
 import android.net.ConnectivityManager

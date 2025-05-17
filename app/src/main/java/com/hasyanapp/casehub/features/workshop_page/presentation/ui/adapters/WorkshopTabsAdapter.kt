@@ -1,13 +1,13 @@
-package com.hasyanapp.casehub.workshop_page.tab_workshop_adapter
+package com.hasyanapp.casehub.features.workshop_page.presentation.ui.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.hasyanapp.casehub.workshop_page.tab_workshop_adapter.tab_fragments.DraftsBar
-import com.hasyanapp.casehub.workshop_page.tab_workshop_adapter.tab_fragments.PublishedBar
+import com.hasyanapp.casehub.features.workshop_page.presentation.ui.fragments.DraftsTabFragment
+import com.hasyanapp.casehub.features.workshop_page.presentation.ui.fragments.PublishedTabsFragment
 
-class TabWorkshopAdapter (
+class WorkshopTabsAdapter (
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle,
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {
@@ -17,10 +17,10 @@ class TabWorkshopAdapter (
 
     override fun createFragment(position: Int): Fragment {
         return if(position == 0){
-            PublishedBar()
+            PublishedTabsFragment()
         }
         else{
-            DraftsBar()
+            DraftsTabFragment()
         }
     }
 
