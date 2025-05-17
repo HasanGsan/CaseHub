@@ -4,32 +4,20 @@ import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowInsetsController
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 
-import com.google.android.material.appbar.MaterialToolbar
 import com.hasyanapp.casehub.R
 import com.hasyanapp.casehub.databinding.ActivityMainBinding
-import com.hasyanapp.network.ConnectivityObserver
-import com.hasyanapp.network.NetworkConnectivityObserver
+import com.hasyanapp.casehub.core.network.ConnectivityObserver
+import com.hasyanapp.casehub.core.network.NetworkConnectivityObserver
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

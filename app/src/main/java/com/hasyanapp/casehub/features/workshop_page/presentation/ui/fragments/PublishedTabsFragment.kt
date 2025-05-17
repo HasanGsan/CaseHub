@@ -1,4 +1,4 @@
-package com.hasyanapp.casehub.workshop_page.tab_workshop_adapter.tab_fragments
+package com.hasyanapp.casehub.features.workshop_page.presentation.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.hasyanapp.casehub.databinding.FragmentPublishedBarBinding
 
-class PublishedBar : Fragment() {
+class PublishedTabsFragment : Fragment() {
 
     private var _binding: FragmentPublishedBarBinding? = null
     private val binding

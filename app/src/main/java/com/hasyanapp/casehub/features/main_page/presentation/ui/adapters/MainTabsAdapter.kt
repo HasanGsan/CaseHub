@@ -1,13 +1,13 @@
-package com.hasyanapp.casehub.main_page.tab_main_adapter
+package com.hasyanapp.casehub.features.main_page.presentation.ui.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments.AllBar
-import com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments.FavoriteBar
+import com.hasyanapp.casehub.features.main_page.presentation.ui.fragments.AllTabFragment
+import com.hasyanapp.casehub.features.main_page.presentation.ui.fragments.FavoriteTabFragment
 
-class TabMainAdapter (
+class MainTabsAdapter (
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle,
 ) : FragmentStateAdapter(fragmentManager, lifecycle){
@@ -17,9 +17,9 @@ class TabMainAdapter (
 
     override fun createFragment(position: Int): Fragment {
         return if(position == 0)
-            AllBar()
+            AllTabFragment()
         else
-            FavoriteBar()
+            FavoriteTabFragment()
     }
 
 }

@@ -1,4 +1,4 @@
-package com.hasyanapp.casehub.profile_page.fragment
+package com.hasyanapp.casehub.features.profile_page.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

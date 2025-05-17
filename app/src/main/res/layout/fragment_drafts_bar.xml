@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".workshop_page.tab_workshop_adapter.tab_fragments.DraftsBar">
+    tools:context=".features.workshop_page.presentation.ui.fragments.DraftsTabFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

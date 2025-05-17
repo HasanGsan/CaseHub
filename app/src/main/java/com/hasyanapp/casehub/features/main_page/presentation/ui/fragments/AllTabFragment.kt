@@ -1,4 +1,4 @@
-package com.hasyanapp.casehub.main_page.tab_main_adapter.tab_fragments
+package com.hasyanapp.casehub.features.main_page.presentation.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.hasyanapp.casehub.databinding.FragmentAllBarBinding
 
 
-class AllBar : Fragment() {
+class AllTabFragment : Fragment() {
 
     private var _binding: FragmentAllBarBinding? = null
     private val binding
