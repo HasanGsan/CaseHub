@@ -24,11 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-
-    //Необходимые данные для проверки интернета
-    private lateinit var networkBlank: ConstraintLayout
-    private lateinit var connectivityObserver: ConnectivityObserver
-
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,12 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        networkBlank = findViewById(R.id.network_include)
-        connectivityObserver = NetworkConnectivityObserver(applicationContext)
         val bottomNavBar = binding.bottomNavigationMain
         val navController = findNavController(R.id.navHostFragment)
         bottomNavBar.setupWithNavController(navController)
 
+        //Toolbar / Appbar
         val toolbar = binding.toolbarMain
         setSupportActionBar(toolbar)
 
@@ -51,41 +45,13 @@ class MainActivity : AppCompatActivity() {
             setOf(R.id.mainFragment, R.id.workshopFragment, R.id.profileFragment)
         )
 
+        // Навигация
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
 
         window.insetsController?.let {
             it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
             it.hide(WindowInsets.Type.systemBars())
         }
-
-        //Проверка интернета после запуска
-        val currentStatus =  (connectivityObserver as NetworkConnectivityObserver)  .getCurrentStatus()
-        networkBlank.visibility = if(currentStatus == ConnectivityObserver.Status.Available){
-            ConstraintLayout.GONE
-        }
-        else{
-            ConstraintLayout.VISIBLE
-        }
-
-        //Ассинхронная проверка интернета
-        lifecycleScope.launch {
-            connectivityObserver.observe().collect { status ->
-                when(status){
-                    ConnectivityObserver.Status.Available -> {
-                        networkBlank.visibility = ConstraintLayout.GONE
-                    }
-                    else -> {
-                        networkBlank.visibility = ConstraintLayout.VISIBLE
-                    }
-                }
-
-            }
-        }
-
-
-
-//        binding.bottomNavigationBar.setOnApplyWindowInsetsListener(null)
-//        binding.bottomNavigationBar.setPadding(0,0,0,0)
 
     }
 }
